@@ -1,0 +1,305 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[a4paper,  margin=1.2cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{cmbright}
+
+\usepackage{longtable}
+\usepackage{color}
+\DeclareRobustCommand{\ltsym}{{\mbox{%
+\def\width{0.8pt}
+\hbox to \width{\relax}%
+\hbox to 0pt{\hbox to 0pt{\hss\(\circ\)\hss}%
+\hbox to 0pt{\hss\(-\)\hss}%
+}
+\hbox to \width{\relax}%
+}}}
+
+\def\titlebanner{\relax}
+\usepackage{ifthen}
+\usepackage{amsmath,amstext}
+\title{CH5101 Foundations of Physical Chemistry --- Key Equations}
+%
+
+% \renewenvironment{note}[0]{\relax}{\relax}
+\def\Text#1{\text{\color{textcolor}#1}}
+\definecolor{mathcolor}{rgb}{0,0,0}
+\definecolor{textcolor}{rgb}{0,0,0}
+\definecolor{memorise}{rgb}{0,0,0}
+\definecolor{explain}{rgb}{0.0,0,0.0}
+\newenvironment{explain}{\color{explain}\def\arraystretch{1.6}\setlength{\tabcolsep}{.05\textwidth}\begin{longtable}{@{}p{.35\textwidth}p{.55\textwidth}}\raggedright}{\end{longtable}}
+\begin{document}
+% \maketitle
+\begin{center}
+\textbf{\Large CH5101 Foundations of Physical Chemistry --- Key Equations}
+\end{center}
+
+%\clearpage
+%\addtocounter{section}{-1}
+\section*{Kinetics}
+\begin{explain}Integrated rate law for first order reaction & $[A]=[A]_0 \exp(-k t)$ \\
+    Integrated rate law for second order reaction & $[A]=[A]_0 / \left(2+k [A]_0 t\right)$\\
+    Half life & $t_{1/2} = \ln 2 / k$
+    \\
+    Arrhenius equation & $k=A\exp(-E_a/RT)$
+\end{explain}
+\section*{Spectroscopy}
+\begin{explain}
+    & $c=\nu\, \lambda$
+    \\
+    Planck-Einstein & $E=h\,\nu = h\,c/\lambda = h\, c\, \bar{\nu}$
+    \\
+    Beer-Lambert law & $A=-\log_{10}\left(I/I_0\right) = -\log_{10} T = \epsilon\,c\,l$
+    \\
+    Rydberg equation & $\bar{\nu}=R_{\text H}\left(1/n_1^2-1/n_2^2\right)$
+    \\
+    Vibrational energy levels & $E_v=h\,\omega(v+\tfrac12),\quad \omega=(1/2\pi)\sqrt{k/\mu}$
+    \\
+    Rotational energy levels & $E_J=h\,B\,J(J+1), \quad B=h/(8\pi^2\, c\, I), \quad I=\mu\,r^2$
+\end{explain}
+\section*{Gases}
+\begin{explain}Ideal gas equation of state & $pV=nRT$
+\\
+Van der Waals equation of state & $\left(p+a/V_m^2\right)\left(V_m-b\right)=RT$
+\\
+Partial pressure in an ideal gas & $p_{\text X} = p_{\text{tot}}\, n_{\text X}/n_{\text{tot}} $
+\\
+Compression factor &$Z=pV/(nRT)$
+\\
+Most probable particle speed & $v_{\text{mp}} = \sqrt{2k_B T/m}$
+\\
+Mean particle speed & $v_{\text{mean}} = \sqrt{8k_B T/(\pi m)}$
+\\
+Most probable particle kinetic energy & $E_{\text{mp}} = \frac12 k_B T$
+\\
+Mean particle kinetic energy & $E_{\text{mean}} = \frac32 k_B T$
+\\
+Reduced mass & $\mu=m_{\text X} m_{\text Y} / (m_{\text X} +m_{\text Y} )$
+\\
+Collision frequency & $z=\sigma\,\mathcal{N}\sqrt{8/(\pi\mu k_B T)}$
+\\
+Collision density & $Z_{\text X \text X}=2\sigma\,\mathcal{N}^2\sqrt{k_B T/(\pi\mu )}=2\sigma\,p^2/\sqrt{\pi m k_B^3 T^3}$
+\\
+& $Z_{\text X \text Y}=2\sqrt 2\,\sigma\,\mathcal{N}_{\text X} \mathcal{N}_{\text Y} \sqrt{k_B T/(\pi\mu )}=2\sqrt 2\,\sigma\,p_{\text X}p_{\text Y}/\sqrt{\pi m k_B^3 T^3}$
+\\
+Mean free path & $\lambda = 1/\left(\sqrt2\,\mathcal N\,\sigma\right)=k_B T/\left(\sqrt2\,p\,\sigma\right)$
+\\
+Diffusion coefficient & $D=2/\left(3\mathcal N \sigma\right)\sqrt{k_B T/(\pi\mu)}$
+\\
+Collisions with walls & $Z_{\text W}=p/\sqrt{2\pi m k_B T}$
+\end{explain}
+\section*{Thermodynamics}
+\begin{explain}First law
+&
+$\Delta U = \Delta q + \Delta w$
+\\
+Mechanical work
+&\color{memorise} $\Delta w = \text{force} \times \text{distance}$
+\\
+&\color{memorise} $\delta w = -p\,\delta V$
+\\
+&\color{memorise} $\Delta w = -\int p\,dV, =- p\,\Delta V\text{ if $p$
+  constant}$
+\\
+Sample heat capacity & 
+\color{memorise}
+$C = dq/dT$
+\\
+Constant-volume sample heat capacity & 
+\color{memorise}
+$C_V = (\partial U/\partial T)_V$
+\\
+Enthalpy
+&
+\color{memorise}
+$H = U + p\, V$
+\\
+Enthalpy change at constant $p$& $\Delta H = \Delta q=\Delta U + p\Delta V$
+\\
+$pV$ contribution to enthalpy change of reaction with ideal gas
+components
+&
+$\Delta H = \Delta U + \Delta (p\,V) = \Delta n\, R\,T$
+\\
+Heat capacity at constant pressure
+&
+\color{memorise}
+$C_p = (\partial H/\partial T)_p$
+\\
+% Condensed-phase heat capacity at constant pressure
+% &
+% $C_p\approx C_V$ because volume does not change much with temperature
+% \\
+Hess's Law
+%, arising from the fact that $H$ is a state function
+&
+\color{memorise}
+$\Delta H^\ltsym = \Delta_f H^\ltsym[\text{products}]
+- \Delta_f H^\ltsym[\text{reactants}]$
+\\
+Entropy
+&
+$S = k\,\ln W ;
+\color{memorise}
+\quad \delta S = \delta q_{\text{reversible}} / T$
+\\
+Second law & Entropy of an isolated system can never decrease
+\\
+System/surroundings version of second law
+&
+\color{memorise}
+$\Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}}
+\ge 0$
+\\
+Entropy change of expanding ideal gas
+&
+\color{memorise}
+$\Delta S = \Delta q_{\text{rev}}/T = - \Delta w_{\text{rev}} = n \, R
+\, \ln (V_f/V_i)$
+\\
+Third Law
+& At absolute zero of temperature, $S=0$ normally.
+\\
+Entropy change on raising temperature at constant pressure
+&
+$\Delta S = \int _{T_0}^{T_1} C_p\, dT/T
+\approx
+C_p\,\ln (T_1/T_0)$
+\\
+Gibbs energy as a (negative) measure of universal entropy
+&
+\color{memorise}
+$G = H - T S$
+\\
+Reversible change, ie equilibrium
+&
+$\delta S_{\text{universe}} = 0, \quad \delta G_{\text{system}} = 0$
+\\
+Spontaneous change
+&
+$\delta S_{\text{universe}} > 0, \quad \delta G_{\text{system}} < 0$
+\\
+Variation of $G$ with pressure, temperature and composition
+&
+\color{memorise}
+$dG=V\,dp-S\,dT+\mu_A\,dn_A+\mu_B\,dn_B+\mu_C\,dn_C+\dots$
+\\
+% Variation of $G$ with temperature --
+Gibbs-Helmholtz equation
+&
+\color{memorise}
+$ ( \partial(G/T) / \partial T)_p = - H/T^2, \quad
+ ( \partial(\Delta G/T) / \partial T)_p = - \Delta H/T^2$
+\\
+Simple Integrated Gibbs-Helmholtz 
+&
+$\Delta G_1/T_1
+-\Delta G_0/T_0
+= \Delta H (1/T_1-1/T_0)
+$
+\\
+Variation of $G$ with $p$ for ideal gas
+&
+$\Delta G = n\,R\,T\,\ln (p_1/p_0),\quad
+G = G^\ltsym + n\,R\,T\,\ln(p/p^\ltsym)$
+\\
+Phase rule
+&
+\color{memorise}
+$F = C - P + 2$
+\\
+Clapeyron equation
+&
+%\color{memorise}
+$dp/dT = \Delta S_m/\Delta V_m = \Delta H_m / (T \Delta V_m)$
+\\
+Chemical potential is molar free energy
+&
+\color{memorise}
+$\mu_{\text A} = G_{\text A,m}$
+\\
+Equilibrium in terms of chemical potential
+&
+$\mu_{\text{reactant}} = \mu_{\text{product}}$
+\\
+Variation of $\mu$ with pressure for ideal gas
+&
+\color{memorise}
+$\mu = \mu^\ltsym + R\,T\,\ln (p/p^\ltsym)$
+\\
+Ideal reaction quotient (gases)
+&
+\color{memorise}
+$
+Q = \frac
+{
+(p_{\text C}/p^\ltsym)^c
+\,
+(p_{\text D}/p^\ltsym)^d
+}{
+(p_{\text A}/p^\ltsym)^a
+\,
+(p_{\text B}/p^\ltsym)^b
+}$ for 
+$a\text A + b\text B \rightarrow c\text C+d\text D$
+\\
+Variation of molar free energy change with conditions
+&
+\color{memorise}
+$\Delta G_m = \Delta G^\ltsym_m + R\,T\,\ln Q
+$
+\\
+Equilibrium constant
+% as the value of $Q$ at equilibrium ($\Delta G_m=0$)
+&
+\color{memorise}
+$
+\Delta G^\ltsym_m = - R\,T\,\ln K,\quad
+% $\goodbreak$
+K = \exp(-\Delta G^\ltsym_m / R\,T)
+$
+% \\
+% Activity
+% &
+% Generalisation of $p/p^\ltsym$ for components that are not ideal gases
+\\
+% Variation of equilibrium constant with temperature --
+Van't Hoff equation
+&
+%\color{memorise}
+$
+d\ln K / d(1/T) = -\Delta H^\ltsym_m / R $
+\\
+Simple integrated Van't Hoff equation
+&
+$\ln K = - \Delta H_m^\ltsym / (R T) + \Delta S_m^\ltsym / R$
+\\
+Raoult's law
+&
+\color{memorise}
+$p_A = x_A\, p_A^*, \quad
+\mu_A=\mu_A^* + R T \ln x_A$
+\\
+Ideal free energy and entropy of mixing
+&
+%\color{memorise}
+$\Delta_{\text{mix}}G=n R T (x_A \ln x_A+x_B\ln x_B)$;
+\goodbreak
+$\Delta_{\text{mix}}S=-n R(x_A \ln x_A+x_B\ln x_B)$.
+\\
+Depression of
+freezing point, elevation of boiling point
+&
+$\delta T = {x R T^2}/{\Delta H_m}$
+\\
+Osmotic pressure
+&
+$\Pi = [B] R T$
+\end{explain}
+\section*{Electrochemistry}
+\end{document}
+%%% TeX-command-default: "PDFLaTeX"
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
+
