@@ -1,4 +1,9 @@
 \documentclass[a4paper, 11pt, fleqn]{article}
+% for learning
+\def\title{CH5101 Foundations of Physical Chemistry --- Key Equations}
+% for exam paper
+\def\title{Appendix 2: Key Equations}\pagestyle{empty}
+
 \usepackage[a4paper,  margin=1.2cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{cmbright}
@@ -17,7 +22,7 @@
 \def\titlebanner{\relax}
 \usepackage{ifthen}
 \usepackage{amsmath,amstext}
-\title{CH5101 Foundations of Physical Chemistry --- Key Equations}
+
 %
 
 % \renewenvironment{note}[0]{\relax}{\relax}
@@ -38,14 +43,14 @@ E
 \begin{document}
 % \maketitle
 \begin{center}
-\textbf{\Large CH5101 Foundations of Physical Chemistry --- Key Equations}
+\textbf{\Large \title}
 \end{center}
 
 %\clearpage
 %\addtocounter{section}{-1}
 \section*{Kinetics}
 \begin{concepts}Integrated rate law for first order reaction & [A]=[A]_0 \, e^{-k t} \\
-    Integrated rate law for second order reaction & [A]=\frac{[A]_0 }{ 2+k [A]_0 t}\\
+    Integrated rate law for second order reaction & [A]=\frac{[A]_0 }{ 1+k [A]_0 t}\\
     Half life & t_{1/2} = \frac{\ln 2 }{ k}
     \\
     Arrhenius equation & k=A\, e^{-E_a/RT}
@@ -297,6 +302,12 @@ Osmotic pressure
 \Pi = [B]\, R\, T
 \end{concepts}
 \section*{Electrochemistry}
+\begin{concepts}
+    Nernst equation &
+    E_{\text{cell}}
+    =
+    E_{\text{cell}}^\ltsym - \frac{R\, T}{n\,F} \ln Q
+\end{concepts}
 \end{document}
 %%% TeX-command-default: "PDFLaTeX"
 %%% Local Variables: 
