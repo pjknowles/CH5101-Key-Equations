@@ -58,7 +58,7 @@ E
     \\
     Beer-Lambert law & A=-\log_{10}\frac{I}{I_0} = -\log_{10} T = \epsilon\,c\,l
     \\
-    Rydberg equation & \bar{\nu}=R_{\text H}\left(1/n_1^2-1/n_2^2\right)
+    Rydberg equation & \bar{\nu}=R_{\text H}\left(\frac1{n_1^2}-\frac1{n_2^2}\right)
     \\
     Vibrational energy levels & E_v=h\,\omega(v+\tfrac12),\quad \omega=\frac{1}{2\pi}\sqrt{\frac k\mu}
     \\
@@ -101,27 +101,26 @@ Collisions with walls & Z_{\text W}=\frac p{\sqrt{2\pi m k_B T}}
 \Delta U = \Delta q + \Delta w
 \\
 Mechanical work
-&\color{memorise} \Delta w = \text{force} \times \text{distance}
-\\
-&\color{memorise} \delta w = -p\,\delta V
+&\color{memorise} \delta w = \text{force} \times \text{distance}
+= -p\,\delta V
 \\
 &\color{memorise} \Delta w = -\int p\,dV, =- p\,\Delta V\text{ if $p$
   constant}
 \\
 Sample heat capacity & 
 \color{memorise}
-C = dq/dT
+C = \frac{dq}{dT}
 \\
 Constant-volume sample heat capacity & 
 \color{memorise}
-C_V = (\partial U/\partial T)_V
+C_V = \left.\frac{\partial U}{\partial T}\right)_V
 \\
 Enthalpy
 &
 \color{memorise}
 H = U + p\, V
 \\
-Enthalpy change at constant $p$& \Delta H = \Delta q=\Delta U + p\Delta V
+Enthalpy change at constant $p$& \Delta H = \Delta q=\Delta U + p\,\Delta V
 \\
 $pV$ contribution to enthalpy change of reaction with ideal gas
 components
@@ -131,7 +130,7 @@ components
 Heat capacity at constant pressure
 &
 \color{memorise}
-C_p = (\partial H/\partial T)_p
+C_p = \left.\frac{\partial H}{\partial T}\right)_p
 \\
 % Condensed-phase heat capacity at constant pressure
 % &
@@ -148,11 +147,12 @@ Entropy
 &
 S = k\,\ln W ;
 \color{memorise}
-\quad \delta S = \delta q_{\text{reversible}} / T
+\quad \delta S = \frac{\delta q_{\text{reversible}} }{ T}
 \\
-Second law & Entropy of an isolated system can never decrease
-\\
-System/surroundings version of second law
+Second law
+% & Entropy of an isolated system can never decrease
+% \\
+% System/surroundings version of second law
 &
 \color{memorise}
 \Delta S_{\text{universe}} = \Delta S_{\text{system}} + \Delta S_{\text{surroundings}}
@@ -161,31 +161,32 @@ System/surroundings version of second law
 Entropy change of expanding ideal gas
 &
 \color{memorise}
-\Delta S = \Delta q_{\text{rev}}/T = - \Delta w_{\text{rev}} = n \, R
-\, \ln (V_f/V_i)
+\Delta S = \frac{\Delta q_{\text{rev}}}{T} = - \frac{\Delta w_{\text{rev}}}{T} = n \, R
+\, \ln \frac{V_f}{V_i}
 \\
 Third Law
 & \text{At absolute zero of temperature, $S=0$ normally.}
 \\
 Entropy change on raising temperature at constant pressure
 &
-\Delta S = \int _{T_0}^{T_1} C_p\, dT/T
+\Delta S = \int _{T_0}^{T_1} \frac{C_p}T\, dT
 \approx
-C_p\,\ln (T_1/T_0)
+C_p\,\ln \frac{T_1}{T_0}
 \\
-Gibbs energy as a (negative) measure of universal entropy
+Gibbs energy
+%as a (negative) measure of universal entropy
 &
 \color{memorise}
 G = H - T S
 \\
-Reversible change, ie equilibrium
-&
-\delta S_{\text{universe}} = 0, \quad \delta G_{\text{system}} = 0
-\\
-Spontaneous change
-&
-\delta S_{\text{universe}} > 0, \quad \delta G_{\text{system}} < 0
-\\
+% Reversible change, ie equilibrium
+% &
+% \delta S_{\text{universe}} = 0, \quad \delta G_{\text{system}} = 0
+% \\
+% Spontaneous change
+% &
+% \delta S_{\text{universe}} > 0, \quad \delta G_{\text{system}} < 0
+% \\
 Variation of $G$ with pressure, temperature and composition
 &
 \color{memorise}
@@ -195,19 +196,19 @@ dG=V\,dp-S\,dT+\mu_A\,dn_A+\mu_B\,dn_B+\mu_C\,dn_C+\dots
 Gibbs-Helmholtz equation
 &
 \color{memorise}
- ( \partial(G/T) / \partial T)_p = - H/T^2, \quad
- ( \partial(\Delta G/T) / \partial T)_p = - \Delta H/T^2
+ \left.\frac{ \partial(G/T) }{ \partial T}\right)_p = - \frac H{T^2}, \quad
+ \left.\frac{ \partial(\Delta G/T) }{ \partial T}\right)_p = - \frac{\Delta H}{T^2}
 \\
-Simple Integrated Gibbs-Helmholtz 
+Simple integrated Gibbs-Helmholtz 
 &
-\Delta G_1/T_1
--\Delta G_0/T_0
-= \Delta H (1/T_1-1/T_0)
+\frac{\Delta G_1}{T_1}
+-\frac{\Delta G_0}{T_0}
+= \Delta H \left(\frac{1}{T_1}-\frac{1}{T_0}\right)
 \\
 Variation of $G$ with $p$ for ideal gas
 &
-\Delta G = n\,R\,T\,\ln (p_1/p_0),\quad
-G = G^\ltsym + n\,R\,T\,\ln(p/p^\ltsym)
+\Delta G = n\,R\,T\,\ln \frac{p_1}{p_0},\quad
+G = G^\ltsym + n\,R\,T\,\ln\frac{p}{p^\ltsym}
 \\
 Phase rule
 &
@@ -217,21 +218,21 @@ F = C - P + 2
 Clapeyron equation
 &
 %\color{memorise}
-dp/dT = \Delta S_m/\Delta V_m = \Delta H_m / (T \Delta V_m)
+\frac{dp}{dT} = \frac{\Delta S_m}{\Delta V_m} = \frac{\Delta H_m }{ T\, \Delta V_m}
 \\
-Chemical potential is molar free energy
+Chemical potential of pure substance
 &
 \color{memorise}
 \mu_{\text A} = G_{\text A,m}
 \\
-Equilibrium in terms of chemical potential
-&
-\mu_{\text{reactant}} = \mu_{\text{product}}
-\\
+% Equilibrium in terms of chemical potential
+% &
+% \mu_{\text{reactant}} = \mu_{\text{product}}
+% \\
 Variation of $\mu$ with pressure for ideal gas
 &
 \color{memorise}
-\mu = \mu^\ltsym + R\,T\,\ln (p/p^\ltsym)
+\mu = \mu^\ltsym + R\,T\,\ln \frac p{p^\ltsym}
 \\
 Ideal reaction quotient (gases)
 &
@@ -257,7 +258,7 @@ Equilibrium constant
 &
 \color{memorise}
 \Delta G^\ltsym_m = - R\,T\,\ln K,\quad
-K = \exp(-\Delta G^\ltsym_m / R\,T)
+K = e^{-\Delta G^\ltsym_m / R\,T}
 % \\
 % Activity
 % &
@@ -267,17 +268,17 @@ K = \exp(-\Delta G^\ltsym_m / R\,T)
 Van't Hoff equation
 &
 %\color{memorise}
-d\ln K / d(1/T) = -\Delta H^\ltsym_m / R 
+\frac{d\ln K }{ d(1/T)} = -\frac{\Delta H^\ltsym_m }{ R} 
 \\
 Simple integrated Van't Hoff equation
 &
-\ln K = - \Delta H_m^\ltsym / (R T) + \Delta S_m^\ltsym / R
+\ln K = - \frac{\Delta H_m^\ltsym }{ R\ T} + \frac{\Delta S_m^\ltsym } R
 \\
 Raoult's law
 &
 \color{memorise}
 p_A = x_A\, p_A^*, \quad
-\mu_A=\mu_A^* + R T \ln x_A
+\mu_A=\mu_A^* + R\, T \ln x_A
 \\
 Ideal free energy and entropy of mixing
 &
@@ -289,11 +290,11 @@ Ideal free energy and entropy of mixing
 Depression of
 freezing point, elevation of boiling point
 &
-\delta T = {x R T^2}/{\Delta H_m}
+\delta T = \frac{x\, R\, T^2}{\Delta H_m}
 \\
 Osmotic pressure
 &
-\Pi = [B] R T
+\Pi = [B]\, R\, T
 \end{concepts}
 \section*{Electrochemistry}
 \end{document}
