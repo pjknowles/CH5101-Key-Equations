@@ -10,7 +10,8 @@
 
 \usepackage{longtable}
 \usepackage{color}
-\DeclareRobustCommand{\ltsym}{{\mbox{%
+
+\DeclareRobustCommand{\StandardState}{{\mbox{%
 \def\width{0.8pt}
 \hbox to \width{\relax}%
 \hbox to 0pt{\hbox to 0pt{\hss\(\circ\)\hss}%
@@ -19,24 +20,13 @@
 \hbox to \width{\relax}%
 }}}
 
-\def\titlebanner{\relax}
-\usepackage{ifthen}
 \usepackage{amsmath,amstext}
 
-%
-
-% \renewenvironment{note}[0]{\relax}{\relax}
-\def\Text#1{\text{\color{textcolor}#1}}
-\definecolor{mathcolor}{rgb}{0,0,0}
-\definecolor{textcolor}{rgb}{0,0,0}
 \definecolor{memorise}{rgb}{0,0,0}
-\definecolor{explain}{rgb}{0.0,0,0.0}
+\definecolor{concepts}{rgb}{0.0,0,0.0}
 \usepackage{array}
-\newenvironment{explain}{\color{explain}\def\arraystretch{1.6}\setlength{\tabcolsep}{.05\textwidth}\begin{longtable}{@{}p{.35\textwidth}%
-p{.55\textwidth}%
-}\raggedright}{\end{longtable}}
 \newcolumntype{E}{>{$\displaystyle}p{.55\textwidth}<{$}}
-\newenvironment{concepts}{\color{explain}\def\arraystretch{2.5}\setlength{\tabcolsep}{.05\textwidth}\begin{longtable}{@{}p{.35\textwidth}
+\newenvironment{concepts}{\color{concepts}\def\arraystretch{2.5}\setlength{\tabcolsep}{.05\textwidth}\begin{longtable}{@{}p{.35\textwidth}
 % p{.55\textwidth}%
 E
 }\raggedright}{\end{longtable}}
@@ -145,8 +135,8 @@ Hess's Law
 %, arising from the fact that $H$ is a state function
 &
 \color{memorise}
-\Delta H^\ltsym = \Delta_f H^\ltsym[\text{products}]
-- \Delta_f H^\ltsym[\text{reactants}]
+\Delta H^\StandardState = \Delta_f H^\StandardState[\text{products}]
+- \Delta_f H^\StandardState[\text{reactants}]
 \\
 Entropy
 &
@@ -213,7 +203,7 @@ Simple integrated Gibbs-Helmholtz
 Variation of $G$ with $p$ for ideal gas
 &
 \Delta G = n\,R\,T\,\ln \frac{p_1}{p_0},\quad
-G = G^\ltsym + n\,R\,T\,\ln\frac{p}{p^\ltsym}
+G = G^\StandardState + n\,R\,T\,\ln\frac{p}{p^\StandardState}
 \\
 Phase rule
 &
@@ -237,47 +227,47 @@ Chemical potential of pure substance
 Variation of $\mu$ with pressure for ideal gas
 &
 \color{memorise}
-\mu = \mu^\ltsym + R\,T\,\ln \frac p{p^\ltsym}
+\mu = \mu^\StandardState + R\,T\,\ln \frac p{p^\StandardState}
 \\
 Ideal reaction quotient (gases)
 &
 \color{memorise}
 Q = \frac
 {
-(p_{\text C}/p^\ltsym)^c
+(p_{\text C}/p^\StandardState)^c
 \,
-(p_{\text D}/p^\ltsym)^d
+(p_{\text D}/p^\StandardState)^d
 }{
-(p_{\text A}/p^\ltsym)^a
+(p_{\text A}/p^\StandardState)^a
 \,
-(p_{\text B}/p^\ltsym)^b
+(p_{\text B}/p^\StandardState)^b
 }\text{ for }a\text A + b\text B \rightarrow c\text C+d\text D
 \\
 Variation of molar free energy change with conditions
 &
 \color{memorise}
-\Delta G_m = \Delta G^\ltsym_m + R\,T\,\ln Q
+\Delta G_m = \Delta G^\StandardState_m + R\,T\,\ln Q
 \\
 Equilibrium constant
 % as the value of $Q$ at equilibrium ($\Delta G_m=0$)
 &
 \color{memorise}
-\Delta G^\ltsym_m = - R\,T\,\ln K,\quad
-K = e^{-\Delta G^\ltsym_m / R\,T}
+\Delta G^\StandardState_m = - R\,T\,\ln K,\quad
+K = e^{-\Delta G^\StandardState_m / R\,T}
 % \\
 % Activity
 % &
-% Generalisation of $p/p^\ltsym$ for components that are not ideal gases
+% Generalisation of $p/p^\StandardState$ for components that are not ideal gases
 \\
 % Variation of equilibrium constant with temperature --
 Van't Hoff equation
 &
 %\color{memorise}
-\frac{d\ln K }{ d(1/T)} = -\frac{\Delta H^\ltsym_m }{ R} 
+\frac{d\ln K }{ d(1/T)} = -\frac{\Delta H^\StandardState_m }{ R} 
 \\
 Simple integrated Van't Hoff equation
 &
-\ln K = - \frac{\Delta H_m^\ltsym }{ R\ T} + \frac{\Delta S_m^\ltsym } R
+\ln K = - \frac{\Delta H_m^\StandardState }{ R\ T} + \frac{\Delta S_m^\StandardState } R
 \\
 Raoult's law
 &
@@ -288,9 +278,9 @@ p_A = x_A\, p_A^*, \quad
 Ideal free energy and entropy of mixing
 &
 %\color{memorise}
-\Delta_{\text{mix}}G=n R T (x_A \ln x_A+x_B\ln x_B)
+\Delta_{\text{mix}}G=n\, R\, T\, \left(x_A \ln x_A+x_B\ln x_B\right)
 \\ &
-\Delta_{\text{mix}}S=-n R(x_A \ln x_A+x_B\ln x_B)
+\Delta_{\text{mix}}S=-n\, R\,\left(x_A \ln x_A+x_B\ln x_B\right)
 \\
 Depression of
 freezing point, elevation of boiling point
@@ -302,11 +292,9 @@ Osmotic pressure
 \Pi = [B]\, R\, T
 \end{concepts}
 \section*{Electrochemistry}
-\begin{concepts}
-    Nernst equation &
-    E_{\text{cell}}
-    =
-    E_{\text{cell}}^\ltsym - \frac{R\, T}{n\,F} \ln Q
+\begin{concepts}% 
+    Cell free energy change & \Delta G = - n\, F\, E \\
+    Nernst equation & E_{\text{cell}} = E_{\text{cell}}^\StandardState - \frac{R\, T}{n\,F}\, \ln Q
 \end{concepts}
 \end{document}
 %%% TeX-command-default: "PDFLaTeX"
